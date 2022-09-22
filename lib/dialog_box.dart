@@ -27,13 +27,13 @@ class DialogBox extends StatelessWidget {
             const SizedBox(height: 10),
             //* buttons -> save + cancel
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 //* save button
-                MyButton(text: 'Save button', onPressed: () {}),
+                MyButton(text: 'Save', onPressed: () {}),
 
                 //* cancel button
-                MyButton(text: 'Save button', onPressed: () {}),
+                MyButton(text: 'Cancel', onPressed: () {}),
               ],
             )
           ],
