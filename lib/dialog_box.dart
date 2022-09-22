@@ -3,9 +3,14 @@ import 'package:flutter/material.dart';
 
 class DialogBox extends StatelessWidget {
   final controller;
-  const DialogBox({
+  VoidCallback onSave;
+  VoidCallback onCancel;
+
+  DialogBox({
     super.key,
     required this.controller,
+    required this.onSave,
+    required this.onCancel,
   });
 
   @override
@@ -20,7 +25,9 @@ class DialogBox extends StatelessWidget {
             TextField(
               controller: controller,
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
                 hintText: 'Add a new task',
               ),
             ),
@@ -30,10 +37,18 @@ class DialogBox extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 //* save button
-                MyButton(text: 'Save', onPressed: () {}),
+                MyButton(
+                    text: 'Save',
+                    onPressed: () {
+                      onSave();
+                    }),
 
                 //* cancel button
-                MyButton(text: 'Cancel', onPressed: () {}),
+                MyButton(
+                    text: 'Cancel',
+                    onPressed: () {
+                      onCancel;
+                    }),
               ],
             )
           ],
