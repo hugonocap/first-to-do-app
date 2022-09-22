@@ -22,6 +22,9 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  //* create a new task
+  void createNewTask() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +34,10 @@ class _HomePageState extends State<HomePage> {
           child: Text('MAGA To Do'),
         ),
         elevation: 0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: createNewTask(),
+        child: Icon(Icons.add_rounded),
       ),
       body: ListView.builder(
         itemCount: toDoList.length,
@@ -44,4 +51,6 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+  createNewTask() {}
 }
