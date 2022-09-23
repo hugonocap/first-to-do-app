@@ -19,7 +19,7 @@ class DialogBox extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
-      backgroundColor: Colors.grey,
+      backgroundColor: Color(0xFFD2326F),
       content: Container(
         height: 120,
         child: Column(
@@ -32,6 +32,9 @@ class DialogBox extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 hintText: 'Add a new task',
+                hintStyle: TextStyle(
+                  color: Color(0xFFFFC9DE),
+                ),
               ),
             ),
             const SizedBox(height: 10),
